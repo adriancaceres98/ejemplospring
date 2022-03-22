@@ -3,11 +3,14 @@ package com.ejemplospring.ejemplospring.service;
 import com.ejemplospring.ejemplospring.dto.PersonaDto;
 import com.ejemplospring.ejemplospring.dto.ResponseDto;
 
-public class PersonaService {
+import java.util.ArrayList;
 
-    public ResponseDto crearRespuesta(PersonaDto personaDto) {
-        ResponseDto responseDto = new ResponseDto(personaDto.getNombre(), personaDto.getApellido());
-        return responseDto;
-    }
+
+public interface PersonaService {
+    public ResponseDto crearRespuesta(PersonaDto personaDto);
+
+    public ArrayList<PersonaDto> getPersonas();
+
+    public ArrayList<PersonaDto> getPersonasAutowired();
 
 }
